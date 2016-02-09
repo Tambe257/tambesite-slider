@@ -1,0 +1,141 @@
+.avatar {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.avatar img {
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+  -ms-border-radius: 180px;
+  border-radius: 180px;
+  border: 2px #fff solid;
+  margin-bottom: 20px; 
+}
+
+
+.header-left {
+  float: left;
+}
+
+.home-greeting {
+  color: white;
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin: -45px 0 0 0;
+  
+  h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+  }
+  
+  p {
+    font-size: 1.8rem;
+    line-height: 120%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  
+  .avatar {
+    float: left;
+    margin: -20px 0 0 100px;
+    width: 30%;
+  }
+  
+  .home-greeting {
+    width: 50%;
+    margin: 10px 0 0 0;
+    
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 2.0rem;
+      line-height: 90%;
+    }
+  }  
+}
+
+@media only screen and (min-width: 1024px){
+  
+  .avatar {
+    margin: -70px 0 0 100px;
+  }
+  
+  .home-greeting {
+    width: 60%;
+    margin: -45px 0 0 0;
+    float: left;
+    
+    h1 {
+      font-size: 6rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 2.5rem;
+      line-height: 90%;
+    }
+  }  
+}
+
+/*     Logo    */
+
+.logo {
+  width: 8rem; 
+  margin: -6px 0 0 25px;
+}
+
+span.logo1 {
+  color: #FFFFFF;
+  font-size: 4.2rem !important; 
+  
+}
+
+span.logo2 {
+  color: #FFFFFF;
+  font-size: 1.7rem !important;
+  position: absolute;
+  top: 8px;
+  margin-left: 8px !important; }
+
+span.logo3 {
+  color: #FFFFFF;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 26px;
+  margin-left: 8px !important; }
+
+ul.title-area {
+  margin: 10px 0 0 10px;  
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 13rem; 
+    margin-left: 35px;
+  }
+
+  span.logo1 {
+    color: #FFFFFF;
+    font-size: 4.3rem !important; }
+
+  span.logo2 {
+    color: #FFFFFF;
+    font-size: 1.7rem !important;
+    position: absolute;
+    margin-left: 8px !important; }
+
+  span.logo3 {
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    position: absolute;
+    margin-left: 8px !important; }
+
+  ul.title-area {
+    margin: 10px 0 0 10px;  
+  }
+}

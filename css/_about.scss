@@ -1,0 +1,23 @@
+#about-section {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  
+  a, a:hover {
+    color: white;
+  }
+  h1 {
+    
+  }
+  
+  .about-image {
+    margin-top: -50px;
+    
+    img {
+      height: 19rem;
+      width: 19rem;
+      border-radius: 400px;
+      margin: 2%;
+    }
+  }
+}
