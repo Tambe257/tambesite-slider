@@ -3,6 +3,10 @@
 Primary style
 
 -------------------------------- */
+
+
+$white: #ffffff;
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -186,7 +190,6 @@ Slider
   position: relative;
 //  height: 360px;
   height: 627px;
-  overflow: hidden;
 }
 .cd-hero-slider li {
   position: absolute;
@@ -267,7 +270,7 @@ Single slide style
   background-image: url("../assets/apple-laptopD.gif");
 }
 .cd-hero-slider li:nth-of-type(2) {
-  background-color: #3d4952;
+  background-color: #98A3AB;
   background-image: url("../assets/tech-1-mobile.jpg");
 }
 .cd-hero-slider li:nth-of-type(3) {
@@ -499,7 +502,8 @@ Single slide animation
   }
   .cd-hero-slider .cd-full-width h2,
   .cd-hero-slider .cd-full-width p,
-  .cd-hero-slider .cd-full-width .cd-btn {
+  .cd-hero-slider .cd-full-width .cd-btn,
+  .cd-hero-slider .cd-full-width .social {
     opacity: 0;
     -webkit-transform: translateX(100px);
     -moz-transform: translateX(100px);
@@ -509,7 +513,8 @@ Single slide animation
   }
   .cd-hero-slider .move-left .cd-full-width h2,
   .cd-hero-slider .move-left .cd-full-width p,
-  .cd-hero-slider .move-left .cd-full-width .cd-btn {
+  .cd-hero-slider .move-left .cd-full-width .cd-btn,
+  .cd-hero-slider .move-left .cd-full-width .social {
     opacity: 0;
     -webkit-transform: translateX(-100px);
     -moz-transform: translateX(-100px);
@@ -519,7 +524,8 @@ Single slide animation
   }
   .cd-hero-slider .selected .cd-full-width h2,
   .cd-hero-slider .selected .cd-full-width p,
-  .cd-hero-slider .selected .cd-full-width .cd-btn {
+  .cd-hero-slider .selected .cd-full-width .cd-btn,
+  .cd-hero-slider .selected .cd-full-width .social {
     /* this is the visible slide */
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -530,7 +536,8 @@ Single slide animation
   }
   .cd-hero-slider li.is-moving .cd-full-width h2,
   .cd-hero-slider li.is-moving .cd-full-width p,
-  .cd-hero-slider li.is-moving .cd-full-width .cd-btn {
+  .cd-hero-slider li.is-moving .cd-full-width .cd-btn,
+  .cd-hero-slider li.is-moving .cd-full-width .social {
     /* this is the slide moving outside the viewport 
     wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
     -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
@@ -551,6 +558,21 @@ Single slide animation
     -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s;
     -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s;
     transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
+  }
+  .cd-hero-slider li.selected #mail {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.5s 0.3s, background-color 0.2s 0s;
+  }
+  .cd-hero-slider li.selected #github {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.7s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.7s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.7s 0.3s, background-color 0.2s 0s;
+  }
+  .cd-hero-slider li.selected #twitter {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.8s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.8s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.8s 0.3s, background-color 0.2s 0s;
   }
 }
 /* -------------------------------- 
@@ -752,3 +774,5 @@ Javascript disabled
 
 @import "home";
 @import "about";
+@import "tech";
+@import "tech2";

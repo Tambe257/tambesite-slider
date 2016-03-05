@@ -1,0 +1,75 @@
+#tech1 {
+  
+  h2 {
+    margin-bottom: 35px;
+    font-size: 3rem;
+  }
+  
+  .tech-icon  {
+    width: 50%;
+    height: 200px;
+    float: left;
+
+    hr {
+      width: 50%;  
+    }
+
+    img {
+      height: 60px;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+  
+  @include tablet {
+   
+    h2 {
+      margin-bottom: 25px;  
+    }
+
+    .tech-icon  {
+      width: 25%;
+      float: left;
+      height: 300px;
+
+      hr {
+        width: 60%;  
+      }
+
+      img {
+        height: 60px;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  
+  @include desktop {
+   
+    h2 {
+      margin-bottom: 25px;  
+    }
+
+    .tech-icon  {
+      width: 25%;
+      float: left;
+      height: 300px;
+
+      hr {
+        width: 60%;  
+      }
+
+      img {
+        height: 60px;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

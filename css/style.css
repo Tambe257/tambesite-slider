@@ -138,8 +138,7 @@ Slider
 
 .cd-hero-slider {
   position: relative;
-  height: 627px;
-  overflow: hidden; }
+  height: 627px; }
 
 .cd-hero-slider li {
   position: absolute;
@@ -199,7 +198,7 @@ Single slide style
   background-image: url("../assets/apple-laptopD.gif"); }
 
 .cd-hero-slider li:nth-of-type(2) {
-  background-color: #3d4952;
+  background-color: #98A3AB;
   background-image: url("../assets/tech-1-mobile.jpg"); }
 
 .cd-hero-slider li:nth-of-type(3) {
@@ -422,7 +421,8 @@ Single slide animation
 
   .cd-hero-slider .cd-full-width h2,
   .cd-hero-slider .cd-full-width p,
-  .cd-hero-slider .cd-full-width .cd-btn {
+  .cd-hero-slider .cd-full-width .cd-btn,
+  .cd-hero-slider .cd-full-width .social {
     opacity: 0;
     -webkit-transform: translateX(100px);
     -moz-transform: translateX(100px);
@@ -432,7 +432,8 @@ Single slide animation
 
   .cd-hero-slider .move-left .cd-full-width h2,
   .cd-hero-slider .move-left .cd-full-width p,
-  .cd-hero-slider .move-left .cd-full-width .cd-btn {
+  .cd-hero-slider .move-left .cd-full-width .cd-btn,
+  .cd-hero-slider .move-left .cd-full-width .social {
     opacity: 0;
     -webkit-transform: translateX(-100px);
     -moz-transform: translateX(-100px);
@@ -442,7 +443,8 @@ Single slide animation
 
   .cd-hero-slider .selected .cd-full-width h2,
   .cd-hero-slider .selected .cd-full-width p,
-  .cd-hero-slider .selected .cd-full-width .cd-btn {
+  .cd-hero-slider .selected .cd-full-width .cd-btn,
+  .cd-hero-slider .selected .cd-full-width .social {
     /* this is the visible slide */
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -453,7 +455,8 @@ Single slide animation
 
   .cd-hero-slider li.is-moving .cd-full-width h2,
   .cd-hero-slider li.is-moving .cd-full-width p,
-  .cd-hero-slider li.is-moving .cd-full-width .cd-btn {
+  .cd-hero-slider li.is-moving .cd-full-width .cd-btn,
+  .cd-hero-slider li.is-moving .cd-full-width .social {
     /* this is the slide moving outside the viewport 
     wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
     -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
@@ -473,7 +476,22 @@ Single slide animation
   .cd-hero-slider li.selected .cd-btn {
     -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s;
     -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s;
-    transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s; } }
+    transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s; }
+
+  .cd-hero-slider li.selected #mail {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.5s 0.3s, background-color 0.2s 0s; }
+
+  .cd-hero-slider li.selected #github {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.7s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.7s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.7s 0.3s, background-color 0.2s 0s; }
+
+  .cd-hero-slider li.selected #twitter {
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.8s 0.3s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.8s 0.3s, background-color 0.2s 0s;
+    transition: opacity 0.4s 0.4s, transform 0.8s 0.3s, background-color 0.2s 0s; } }
 /* -------------------------------- 
 
 Slider navigation
@@ -775,6 +793,8 @@ ul.title-area {
   margin: 0 auto; }
   #about-section a, #about-section a:hover {
     color: white; }
+  #about-section a {
+    margin: 0 10px; }
   #about-section .about-image {
     margin-top: -50px; }
     #about-section .about-image img {
@@ -782,5 +802,87 @@ ul.title-area {
       width: 19rem;
       border-radius: 400px;
       margin: 2%; }
+
+#tech1 h2 {
+  margin-bottom: 35px;
+  font-size: 3rem; }
+#tech1 .tech-icon {
+  width: 50%;
+  height: 200px;
+  float: left; }
+  #tech1 .tech-icon hr {
+    width: 50%; }
+  #tech1 .tech-icon img {
+    height: 60px; }
+  #tech1 .tech-icon p {
+    font-size: 2rem; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #tech1 h2 {
+    margin-bottom: 25px; }
+  #tech1 .tech-icon {
+    width: 25%;
+    float: left;
+    height: 300px; }
+    #tech1 .tech-icon hr {
+      width: 60%; }
+    #tech1 .tech-icon img {
+      height: 60px; }
+    #tech1 .tech-icon p {
+      font-size: 1.8rem; } }
+@media (min-width: 1024px) {
+  #tech1 h2 {
+    margin-bottom: 25px; }
+  #tech1 .tech-icon {
+    width: 25%;
+    float: left;
+    height: 300px; }
+    #tech1 .tech-icon hr {
+      width: 60%; }
+    #tech1 .tech-icon img {
+      height: 60px; }
+    #tech1 .tech-icon p {
+      font-size: 1.8rem; } }
+
+#tech2 h2 {
+  margin-bottom: 35px;
+  font-size: 4rem; }
+#tech2 .tech-icon {
+  width: 50%;
+  height: 200px;
+  float: left; }
+  #tech2 .tech-icon hr {
+    width: 50%; }
+  #tech2 .tech-icon i {
+    color: #ffffff; }
+  #tech2 .tech-icon img {
+    height: 60px; }
+  #tech2 .tech-icon p {
+    font-size: 2rem; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #tech2 h2 {
+    margin-bottom: 25px; }
+  #tech2 .tech-icon {
+    width: 25%;
+    float: left;
+    height: 300px; }
+    #tech2 .tech-icon hr {
+      width: 60%; }
+    #tech2 .tech-icon img {
+      height: 60px; }
+    #tech2 .tech-icon p {
+      font-size: 1.8rem; } }
+@media (min-width: 1024px) {
+  #tech2 h2 {
+    margin-bottom: 25px; }
+  #tech2 .tech-icon {
+    width: 25%;
+    float: left;
+    height: 300px; }
+    #tech2 .tech-icon hr {
+      width: 60%; }
+    #tech2 .tech-icon img {
+      height: 60px; }
+    #tech2 .tech-icon p {
+      font-size: 1.8rem; } }
 
 /*# sourceMappingURL=style.css.map */
