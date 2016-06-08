@@ -297,7 +297,7 @@ Single slide style
   display: inline-block;
   padding: 1.2em 1.4em;
   margin-top: .8em;
-  background-color: rgba(212, 68, 87, 0.9);
+  background-color: #d44457;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -315,7 +315,7 @@ Single slide style
   margin-left: 1em; }
 
 .no-touch .cd-hero-slider .cd-btn:hover {
-  background-color: #d44457; }
+  background-color: #c94153; }
 
 .no-touch .cd-hero-slider .cd-btn.secondary:hover {
   background-color: #161a1e; }
@@ -504,7 +504,16 @@ Slider navigation
   z-index: 2;
   text-align: center;
   height: 55px;
-  background-color: rgba(0, 1, 1, 0.5); }
+  background-color: #21272c; }
+
+.cd-slider-nav-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  text-align: center;
+  height: 55px;
+  background-color: #21272c; }
 
 .cd-slider-nav nav, .cd-slider-nav ul, .cd-slider-nav li, .cd-slider-nav a {
   height: 100%; }
@@ -807,7 +816,7 @@ ul.title-area {
   margin-bottom: 35px;
   font-size: 3rem; }
 #tech1 .tech-icon {
-  width: 50%;
+  width: 25%;
   height: 200px;
   float: left; }
   #tech1 .tech-icon hr {
@@ -884,5 +893,3 @@ ul.title-area {
       height: 60px; }
     #tech2 .tech-icon p {
       font-size: 1.8rem; } }
-
-/*# sourceMappingURL=style.css.map */

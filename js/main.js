@@ -5,21 +5,24 @@ jQuery(document).ready(function($){
 	if ( slidesWrapper.length > 0 ) {
 		var primaryNav = $('.cd-primary-nav'),
 			sliderNav = $('.cd-slider-nav'),
-			navigationMarker = $('.cd-marker'),
-			slidesNumber = slidesWrapper.children('li').length,
-			visibleSlidePosition = 0,
-			autoPlayId,
-			autoPlayDelay = 5000;
+			navigationMarker = $('.cd-marker');
+//			slidesNumber = slidesWrapper.children('li').length;
+//			visibleSlidePosition = 0,
+//			autoPlayId,
+//			autoPlayDelay = 5000;
 
-		//upload videos (if not on mobile devices)
-		uploadVideo(slidesWrapper);
-
-		//autoplay slider
-		setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+      
+//		//upload videos (if not on mobile devices)
+//		uploadVideo(slidesWrapper);
+//
+//		//autoplay slider
+//		setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
 
 		//on mobile - open/close primary navigation clicking/tapping the menu icon
 		primaryNav.on('click', function(event){
-			if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
+          if($(event.target).is('.cd-primary-nav')){
+            $(this).children('ul').toggleClass('is-visible');
+          }
 		});
 		
 		//change visible slide
@@ -38,12 +41,12 @@ jQuery(document).ready(function($){
 				}
 
 				//this is used for the autoplay
-				visibleSlidePosition = selectedPosition;
+//				visibleSlidePosition = selectedPosition;
 
 				updateSliderNavigation(sliderNav, selectedPosition);
 				updateNavigationMarker(navigationMarker, selectedPosition+1);
-				//reset autoplay
-				setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+//				//reset autoplay
+//				setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
 			}
 		});
 	}
@@ -54,7 +57,7 @@ jQuery(document).ready(function($){
 		});
 
 		container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
-		checkVideo(visibleSlide, container, n);
+//		checkVideo(visibleSlide, container, n);
 	}
 
 	function prevSlide(visibleSlide, container, pagination, n){
@@ -63,7 +66,7 @@ jQuery(document).ready(function($){
 		});
 
 		container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
-		checkVideo(visibleSlide, container, n);
+//		checkVideo(visibleSlide, container, n);
 	}
 
 	function updateSliderNavigation(pagination, n) {
@@ -72,12 +75,12 @@ jQuery(document).ready(function($){
 		pagination.find('li').eq(n).addClass('selected');
 	}
 
-	function setAutoplay(wrapper, length, delay) {
-		if(wrapper.hasClass('autoplay')) {
-			clearInterval(autoPlayId);
-			autoPlayId = window.setInterval(function(){autoplaySlider(length)}, delay);
-		}
-	}
+//	function setAutoplay(wrapper, length, delay) {
+//		if(wrapper.hasClass('autoplay')) {
+//			clearInterval(autoPlayId);
+//			autoPlayId = window.setInterval(function(){autoplaySlider(length)}, delay);
+//		}
+//	}
 
 //	function autoplaySlider(length) {
 //		if( visibleSlidePosition < length - 1) {
@@ -91,29 +94,29 @@ jQuery(document).ready(function($){
 //		updateSliderNavigation(sliderNav, visibleSlidePosition);
 //	}
 
-	function uploadVideo(container) {
-		container.find('.cd-bg-video-wrapper').each(function(){
-			var videoWrapper = $(this);
-			if( videoWrapper.is(':visible') ) {
-				// if visible - we are not on a mobile device 
-				var	videoUrl = videoWrapper.data('video'),
-					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
-				video.appendTo(videoWrapper);
-				// play video if first slide
-				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
-			}
-		});
-	}
+//	function uploadVideo(container) {
+//		container.find('.cd-bg-video-wrapper').each(function(){
+//			var videoWrapper = $(this);
+//			if( videoWrapper.is(':visible') ) {
+//				// if visible - we are not on a mobile device 
+//				var	videoUrl = videoWrapper.data('video'),
+//					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
+//				video.appendTo(videoWrapper);
+//				// play video if first slide
+//				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
+//			}
+//		});
+//	}
 
-	function checkVideo(hiddenSlide, container, n) {
-		//check if a video outside the viewport is playing - if yes, pause it
-		var hiddenVideo = hiddenSlide.find('video');
-		if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
-
-		//check if the select slide contains a video element - if yes, play the video
-		var visibleVideo = container.children('li').eq(n).find('video');
-		if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
-	}
+//	function checkVideo(hiddenSlide, container, n) {
+//		//check if a video outside the viewport is playing - if yes, pause it
+//		var hiddenVideo = hiddenSlide.find('video');
+//		if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
+//
+//		//check if the select slide contains a video element - if yes, play the video
+//		var visibleVideo = container.children('li').eq(n).find('video');
+//		if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
+//	}
 
 	function updateNavigationMarker(marker, n) {
 		marker.removeClassPrefix('item').addClass('item-'+n);
@@ -130,3 +133,36 @@ jQuery(document).ready(function($){
 	    return this;
 	};
 });
+
+/* ------
+
+Show content when nav is clicked
+
+----*/
+
+function hideContentDivs(){
+  $('main.cd-main-content').each(function(){
+    $(this).hide();
+  });
+}
+hideContentDivs();
+
+$('nav a').click(function(){
+   hideContentDivs();
+   var tmp_div = $(this).parent().index();
+   $('main.cd-main-content').eq(tmp_div).show();
+});
+
+$('#home').show();
+
+/* ------
+
+Animated Hamburger Menu
+
+------- */
+
+$(function () {
+	$('.hamburger-menu').on('click', function() {
+		$('.bar').toggleClass('animate');
+	});
+})();
