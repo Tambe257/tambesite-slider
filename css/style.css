@@ -506,14 +506,9 @@ Slider navigation
   height: 55px;
   background-color: #21272c; }
 
-.cd-slider-nav-fixed {
+.cd-slider-nav.stickytop {
   position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 3;
-  text-align: center;
-  height: 55px;
-  background-color: #21272c; }
+  top: 0; }
 
 .cd-slider-nav nav, .cd-slider-nav ul, .cd-slider-nav li, .cd-slider-nav a {
   height: 100%; }
